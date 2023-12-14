@@ -1,0 +1,74 @@
+// All colours are defined in hsl and in relation to eachother.
+// Lightness only depends on the system preference for light/dark mode.
+
+:root {
+  --theme-purple: rgb(120, 100, 160);
+  --theme-grey: hsl(217, 7%, 92%);
+  --actions-header-text: hsl(217, 7%, 34%);
+  --actions-header-background: hsl(217, 7%, 97%);
+  --time-travel-button: hsl(146, 100%, 68%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--theme-purple);
+  background: linear-gradient(
+    165deg,
+    var(--theme-purple) 0%,
+    var(--theme-purple) 20%,
+    var(--theme-grey) 20%
+  );
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  font-weight: normal;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+}
+
+// Vue TransitionGroup list animations
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0.2;
+}
